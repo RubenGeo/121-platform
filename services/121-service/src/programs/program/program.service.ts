@@ -334,7 +334,7 @@ export class ProgramService {
       inclusionRequestStatus = { status: 'done' };
     } else if (program.inclusionCalculationType === 'highestScoresX') {
 
-      // In this case an inclusion-status can only be given later. 
+      // In this case an inclusion-status can only be given later.
       inclusionRequestStatus = { status: 'pending' };
 
     }
@@ -344,7 +344,11 @@ export class ProgramService {
     return inclusionRequestStatus;
   }
 
-  private async notifyInclusionStatus(connection, programId, inclusionResult) {
+  private async notifyInclusionStatus(
+    connection: ConnectionEntity,
+    programId: number,
+    inclusionResult: boolean,
+    ) {
     this.smsService.notifyBySms(
       connection.phoneNumber,
       connection.preferredLanguage,
