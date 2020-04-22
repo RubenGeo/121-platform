@@ -82,7 +82,7 @@ export class SelectLanguageComponent extends PersonalComponent {
   }
 
   getNextSection() {
-    return PersonalComponents.signupSignin;
+    return PersonalComponents.scanQr;
   }
 
   complete() {

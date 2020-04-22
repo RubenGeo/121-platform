@@ -11,6 +11,7 @@ import { PasswordToggleInputComponent } from './password-toggle-input/password-t
 import { PhoneNumberInputComponent } from './phone-number-input/phone-number-input.component';
 import { PlayTextAudioComponent } from './play-text-audio/play-text-audio.component';
 import { QAndASetComponent } from './q-and-a-set/q-and-a-set.component';
+import { QrScannerComponent } from './qr-scanner/qr-scanner.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { QAndASetComponent } from './q-and-a-set/q-and-a-set.component';
     PhoneNumberInputComponent,
     PlayTextAudioComponent,
     QAndASetComponent,
+    QrScannerComponent,
   ],
   imports: [
     CommonModule,
@@ -34,6 +36,7 @@ import { QAndASetComponent } from './q-and-a-set/q-and-a-set.component';
     PhoneNumberInputComponent,
     PlayTextAudioComponent,
     QAndASetComponent,
+    QrScannerComponent,
     TranslateModule,
   ],
 })
