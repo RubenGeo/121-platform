@@ -783,7 +783,23 @@ export class ProgramService {
     if (fspAttributes.length === 0) {
       return null;
     } else {
-      const paymentAddressColumn = fspAttributes[0].name;
+      // console.log('fspAttributes: ', fspAttributes);
+      // const relevantAttribute = fspAttributes.find(attribute => {
+      //   attribute.name == 'phoneNumber' ||
+      //     attribute.name == 'whatsappPhoneNumber';
+      // });
+
+      let paymentAddressColumn;
+      for (const attribute of fspAttributes) {
+        if (
+          attribute.name == 'phoneNumber' ||
+          attribute.name == 'whatsappPhoneNumber'
+        ) {
+          paymentAddressColumn = attribute.name;
+        }
+      }
+      console.log('paymentAddressColumn: ', paymentAddressColumn);
+      // const paymentAddressColumn = relevantAttribute.name;
       return includedConnection.customData[paymentAddressColumn];
     }
   }
